@@ -69,7 +69,7 @@ html.lenis, html.lenis body {
     top: 0;
     left: 0;
     z-index: 100;
-    transition: all .6s ease;
+    transition: all .4s ease-out;
 }
 .nav.hide{
     top: -8rem;
@@ -138,6 +138,7 @@ html.lenis, html.lenis body {
     width: 90%;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 .hero-text h1{
     font-size: 14vw;
@@ -201,7 +202,7 @@ html.lenis, html.lenis body {
     width: 0;
     height: 100vh;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     display: flex;
@@ -226,9 +227,72 @@ html.lenis, html.lenis body {
     margin: 3rem 0;
     color: var(--bg-color);
 }
+.nav-left ul a li{
+    height: 4.5rem !important;
+}
+/* Speakers */
+#speakers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 9rem 0;
+    background-color: #CFE6FF;
+    overflow: hidden;
+}
+#speakers .heading{
+    margin-bottom: 9rem;
+}
+.heading{
+    font-size: 9rem;
+    color: var(--text-color);
+    font-weight: 900;
+}
+.speakers{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.speakers-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 20%;
+}
+.speakers-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+.speakers-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.speakers-box h1{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 2.5rem 0;
+}
+.speakers-box p{
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
 @media screen and (max-width: 1000px) {
     .hero-text h1 {
         font-size: 18vw;
+    }
+    .speakers-img {
+        width: 240px;
+        height: 240px;
+    }
+    .speakers-box {
+        width: 30%;
     }
 }
 @media screen and (max-width: 900px) {
@@ -241,10 +305,37 @@ html.lenis, html.lenis body {
     .nav-left ul a{
         font-size: 3rem;
     }
+    .speakers{
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading{
+        font-size: 8rem;
+    }
+    .speakers-box{
+        width: 400px;
+        margin: 3rem 0;
+    }
+    .speakers-img {
+        width: 340px;
+        height: 340px;
+    }
+    #speakers .heading{
+        margin-bottom: 3rem;
+    }
 }
 @media screen and (max-width: 700px) {
-
+    .heading{
+        font-size: 6rem;
+    }
 }
 @media screen and (max-width: 500px) {
+    .speakers-img {
+        width: 220px;
+        height: 220px;
+    }
+    .speakers-box {
+        width: 90%;
+    }
 
 }

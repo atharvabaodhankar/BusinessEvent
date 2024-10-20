@@ -37,3 +37,103 @@ function stickyNav() {
 }
 
 stickyNav();
+Ferro.button(".nav-left ul a li");
+
+gsap.to("#hero", {
+  backgroundPosition: "100% 100%",
+  scrollTrigger: {
+    trigger: "#hero",
+    start: "top center",
+    end: "bottom center",
+    scrub: 1,
+  },
+});
+gsap.to(".hero-text-1", {
+  opacity: 0,
+  xPercent: 20,
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "60% 50%",
+    end: "bottom 70%",
+    scrub: 1,
+  },
+});
+gsap.to(".hero-text-2", {
+  opacity: 0,
+  xPercent: -20,
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "60% 50%",
+    end: "bottom 70%",
+    scrub: 1,
+  },
+});
+
+
+let mm = gsap.matchMedia();
+mm.add("(min-width: 900px)", () => {
+  gsap.from(".speakers-box-2", {
+    scale: 0.7,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#speakers",
+      start: "top 50%",
+      end: "center 50%",
+      scrub: 1,
+    },
+  });
+  gsap.from(".speakers-box-1", {
+    xPercent: 50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#speakers",
+      start: "top 50%",
+      end: "center 50%",
+      scrub: 1,
+    },
+  });
+  gsap.from(".speakers-box-3", {
+    xPercent: -50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#speakers",
+      start: "top 50%",
+      end: "center 50%",
+      scrub: 1,
+    },
+  });
+});
+
+mm.add("(max-width: 900px)", () => { 
+  gsap.from(".speakers-box-1", {
+    xPercent: 50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".speakers-box-1",
+      start: "top 50%",
+      end: "center 50%",
+      scrub: 1,
+    },
+  });
+  gsap.from(".speakers-box-2", {
+    xPercent: -50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".speakers-box-2",
+      start: "top 50%",
+      end: "center 50%",
+      scrub: 1,
+    },
+  });
+  gsap.from(".speakers-box-3", {
+    xPercent: 50,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".speakers-box-3",
+      start: "top 50%",
+      end: "center 50%",
+      scrub: 1,
+    },
+  });
+});
+
