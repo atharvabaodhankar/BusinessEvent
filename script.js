@@ -137,3 +137,14 @@ mm.add("(max-width: 900px)", () => {
   });
 });
 
+gsap.from(".s-box-animate", {
+  opacity: 0,
+  yPercent: 50,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: "#schedule",
+    start: "top 50%",
+    end: "center 50%",
+    scrub: 1,
+  },
+})

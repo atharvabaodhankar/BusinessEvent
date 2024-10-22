@@ -11,6 +11,7 @@
 html {
     font-size: 62.5%;
     font-family: "Noto Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -18,7 +19,8 @@ p {
     font-size: 1.6rem;
     line-height: 2.5rem;
 }
-#sample{
+
+#sample {
     height: 100vh;
     width: 100%;
 }
@@ -49,8 +51,9 @@ html.lenis, html.lenis body {
     --text-color-dark: rgb(207, 230, 255);
     --primary-color: #f1a10f;
 }
+
 /* Hero */
-#hero{
+#hero {
     height: 100vh;
     width: 100%;
     background-image: url(https://atharvaport.my.canva.site/business-event-website/media/38dad9431c225d0a7750f8e799fe7be9.jpg);
@@ -58,7 +61,8 @@ html.lenis, html.lenis body {
     background-position: center;
     position: relative;
 }
-.nav{
+
+.nav {
     width: 100%;
     height: 8rem;
     display: flex;
@@ -71,10 +75,12 @@ html.lenis, html.lenis body {
     z-index: 100;
     transition: all .4s ease-out;
 }
-.nav.hide{
+
+.nav.hide {
     top: -8rem;
 }
-.nav ul a{
+
+.nav ul a {
     font-size: 2rem;
     color: #fff;
     font-weight: 800;
@@ -86,7 +92,8 @@ html.lenis, html.lenis body {
     z-index: 2;
     transition: all .3s ease;
 }
-.nav ul a::after{
+
+.nav ul a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -98,15 +105,18 @@ html.lenis, html.lenis body {
     background-color: #fff;
     transition: all .3s ease;
 }
-.nav ul a:hover::after{
+
+.nav ul a:hover::after {
     height: 100%;
     width: 100%;
     left: 0;
 }
-.nav ul a:hover{
+
+.nav ul a:hover {
     color: var(--bg-color);
 }
-.hamburger{
+
+.hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -115,18 +125,21 @@ html.lenis, html.lenis body {
     border-radius: 50%;
     z-index: 100;
 }
-.hamburger .hambar{
+
+.hamburger .hambar {
     width: 3rem;
     height: 0.4rem;
     margin: 0.3rem 0;
     border-radius: 5rem;
     background-color: var(--bg-color);
 }
+
 .nav ul {
     list-style: none;
     display: flex;
 }
-.hero{
+
+.hero {
     width: 100%;
     height: calc(100% - 8rem);
     display: flex;
@@ -134,39 +147,46 @@ html.lenis, html.lenis body {
     justify-content: center;
     flex-direction: column;
 }
-.hero-text{
+
+.hero-text {
     width: 90%;
     display: flex;
     flex-direction: column;
     user-select: none;
 }
-.hero-text h1{
+
+.hero-text h1 {
     font-size: 14vw;
     color: #fff;
 }
-.hero-text h1:first-child{
+
+.hero-text h1:first-child {
     align-self: flex-start;
 }
-.hero-text h1:last-child{
+
+.hero-text h1:last-child {
     align-self: flex-end;
 }
-.hero .btn{
+
+.hero .btn {
     position: absolute;
     bottom: 4rem;
 }
-.btn{
+
+.btn {
     font-size: 2rem;
     color: #fff;
     border-radius: 3rem;
     border: 3px solid #fff;
     padding: 1.5rem 3rem;
     font-weight: 700;
-   transition: all .3s ease;
-   position: relative;
-   z-index: 3;
-   overflow: hidden;
+    transition: all .3s ease;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
 }
-.btn::after{
+
+.btn::after {
     content: "";
     position: absolute;
     top: 0;
@@ -177,7 +197,8 @@ html.lenis, html.lenis body {
     transition: all .6s ease;
     z-index: -1;
 }
-.btn::before{
+
+.btn::before {
     content: "";
     position: absolute;
     top: 0;
@@ -189,16 +210,20 @@ html.lenis, html.lenis body {
     border-radius: 1rem;
     z-index: -1;
 }
-.btn:hover::after{
+
+.btn:hover::after {
     width: 100%;
 }
-.btn:hover::before{
+
+.btn:hover::before {
     width: 100%;
 }
-.btn:hover{
+
+.btn:hover {
     color: var(--bg-color);
 }
-.nav-left{
+
+.nav-left {
     width: 0;
     height: 100vh;
     background-color: #fff;
@@ -211,27 +236,32 @@ html.lenis, html.lenis body {
     transition: all 1.2s ease;
     z-index: 90;
 }
-.nav-left.active{
+
+.nav-left.active {
     width: 500px;
     left: 0;
 }
-.nav-left ul{
+
+.nav-left ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.nav-left ul a{
+
+.nav-left ul a {
     font-size: 4rem;
     font-weight: 800;
     margin: 3rem 0;
     color: var(--bg-color);
 }
-.nav-left ul a li{
+
+.nav-left ul a li {
     height: 4.5rem !important;
 }
+
 /* Speakers */
-#speakers{
+#speakers {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,20 +270,24 @@ html.lenis, html.lenis body {
     background-color: #CFE6FF;
     overflow: hidden;
 }
-#speakers .heading{
+
+#speakers .heading {
     margin-bottom: 9rem;
 }
-.heading{
+
+.heading {
     font-size: 9rem;
     color: var(--text-color);
     font-weight: 900;
 }
-.speakers{
+
+.speakers {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
 }
-.speakers-box{
+
+.speakers-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -261,80 +295,191 @@ html.lenis, html.lenis body {
     text-align: center;
     width: 20%;
 }
+
 .speakers-img {
     width: 300px;
     height: 300px;
     border-radius: 5rem;
     overflow: hidden;
 }
-.speakers-img img{
+
+.speakers-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.speakers-box h1{
+
+.speakers-box h1 {
     font-size: 2.5rem;
     color: var(--text-color);
     text-transform: uppercase;
     font-weight: 900;
     margin: 2.5rem 0;
 }
-.speakers-box p{
+
+.speakers-box p {
     font-size: 1.8rem;
     color: var(--text-color);
+}
+
+/* Schedule */
+#schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8rem 0;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+#schedule .heading {
+    margin-bottom: 8rem;
+    color: #fff;
+}
+
+.schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    width: 400px;
+    margin: 2rem ;
+}
+
+.s-box h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: -1rem;
+}
+
+.s-box h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+}
+
+.s-box ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.s-box ul li {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.s-box ul li{
+    border-bottom: 2px solid #ebebeb;
+}
+
+.s-box ul li p {
+    font-size: 1.9rem;
+}
+
+.s-box ul li h3 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .s-box {
+        width: 300px;
+    }
 }
 @media screen and (max-width: 1000px) {
     .hero-text h1 {
         font-size: 18vw;
     }
+
     .speakers-img {
         width: 240px;
         height: 240px;
     }
+
     .speakers-box {
         width: 30%;
     }
+    .s-box {
+        width: 250px;
+    }
 }
+
 @media screen and (max-width: 900px) {
-    .nav ul{
+    .nav ul {
         display: none;
     }
-    .nav-left.active{
-        width:100%;
+
+    .nav-left.active {
+        width: 100%;
     }
-    .nav-left ul a{
+
+    .nav-left ul a {
         font-size: 3rem;
     }
-    .speakers{
+
+    .speakers {
         flex-direction: column;
         align-items: center;
     }
-    .heading{
+
+    .heading {
         font-size: 8rem;
     }
-    .speakers-box{
+
+    .speakers-box {
         width: 400px;
         margin: 3rem 0;
     }
+
     .speakers-img {
         width: 340px;
         height: 340px;
     }
-    #speakers .heading{
+
+    #speakers .heading {
         margin-bottom: 3rem;
     }
+    .schedule{
+        flex-direction: column;
+    }
+    .s-box {
+        width: 500px;
+        margin: 3rem 0;
+    }
 }
+
 @media screen and (max-width: 700px) {
-    .heading{
+    .heading {
         font-size: 6rem;
     }
 }
+
 @media screen and (max-width: 500px) {
     .speakers-img {
         width: 220px;
         height: 220px;
     }
+
     .speakers-box {
+        width: 90%;
+    }
+    .schedule {
+        width: 100%;
+    }
+    .s-box {
         width: 90%;
     }
 
