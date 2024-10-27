@@ -145,6 +145,28 @@ gsap.from(".s-box-animate", {
     trigger: "#schedule",
     start: "top 50%",
     end: "center 50%",
-    scrub: 1,
+    scrub: 3,
+  },
+})
+gsap.from(".design .img img", {
+  yPercent: 110,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: "#design",
+    start: "top 50%",
+    end: "center 50%",
+    scrub: 4,
+  },
+})
+gsap.from("#design span", {
+  opacity: 0,
+  yPercent: 50,
+  skewX: 10,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: "#design",
+    start: "top 70%",
+    end: "center 50%",
+    scrub: 4,
   },
 })
