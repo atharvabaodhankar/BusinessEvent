@@ -170,3 +170,30 @@ gsap.from("#design span", {
     scrub: 4,
   },
 })
+var saveTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#save",
+    start: "top 50%",
+    end: "center 50%",
+    scrub: 3,
+  },
+  onStart: function () {
+    document.querySelector("#save video").play();
+  }
+});
+
+saveTl.from("#save", {
+  duration: 1,
+});
+
+saveTl.from("#save video", {
+  scale: 5,
+  opacity: 0,
+  rotation: 10,
+  duration: 1,
+}, "<");
+saveTl.from(".save h1, .save p", {
+  xPercent: -100,
+  duration: 1,
+  stagger: 0.1
+}, "<");

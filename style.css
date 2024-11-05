@@ -440,6 +440,43 @@ html.lenis, html.lenis body {
     width: 350px;
     height: 8vw;
 }
+/* Save */
+#save{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12rem 0;
+    background-color: var(--text-color);
+    gap: 4vw;
+    overflow: hidden;
+}
+.save-box{
+    width: 500px;
+    height: 500px;
+}
+.save-box video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+}
+.save{
+    color: rgb(207, 230, 255);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 2rem;
+    width: 300px;
+}
+.save h1{
+    font-size: 7rem;
+}
+.save .btn{
+    display: block;
+}
+
 
 @media screen and (max-width: 1300px) {
     .s-box {
@@ -506,6 +543,13 @@ html.lenis, html.lenis body {
         width: 500px;
         margin: 3rem 0;
     }
+    #save{
+        align-items: center;
+        flex-direction: column;
+    }
+    .save{
+        width: 500px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -556,5 +600,15 @@ html.lenis, html.lenis body {
     }
     .d4 .img {
         height: 40vw;
+    }
+    .save{
+        width: 90%;
+    }
+    .save-box{
+        width: 90%;
+        height: 350px;
+    }
+    .save h1{
+        font-size: 5rem;
     }
 }
