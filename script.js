@@ -197,3 +197,41 @@ saveTl.from(".save h1, .save p", {
   duration: 1,
   stagger: 0.1
 }, "<");
+
+var loaderTl = gsap.timeline({
+  onComplete: function () {
+    document.querySelector("#loader").remove();
+
+  }
+});
+
+loaderTl.from(".loader", {
+  yPercent: 100,
+  duration: 1,
+  ease: "power2.inOut",
+});
+
+loaderTl.from(".loader h1 .top", {
+  yPercent: 100,
+  duration: 1,
+  stagger: 0.2,
+  ease: "back.inOut(1.7)",
+}, "a"); 
+
+loaderTl.from(".loader h1 .bottom", {
+  yPercent: -100,
+  duration: 1,
+  stagger: 0.2,
+  ease: "back.inOut(1.7)",
+}, "a"); 
+
+loaderTl.to(".loader", {
+  yPercent: -100,
+  duration: 1,
+  ease: "power2.inOut",
+},'load');
+loaderTl.to("#loader", {
+  yPercent: -100,
+  duration: 0.8,
+  ease: "power2.inOut",
+},'load');
